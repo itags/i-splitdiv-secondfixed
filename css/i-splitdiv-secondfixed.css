@@ -1,0 +1,38 @@
+/* ======================================================================= */
+/* ======================================================================= */
+/* ======================================================================= */
+/* Definition of itag shadow-css is done by defining a `dummy` css-rule    */
+/* for the dummy-element: `itag-css` --> its property (also dummy) `i-tag` */
+/* will define which itag will be css-shadowed                             */
+/* ======================================================================= */
+itag-css {
+    i-tag: i-splitdiv#secondfixed;  /* set the property-value to the proper itag */
+}
+/* ======================================================================= */
+/* ======================================================================= */
+/* ======================================================================= */
+
+i-splitdiv[is="secondfixed"] >div >div[section="first"] {
+    flex-grow: 1;
+    -ms-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    flex-shrink: 1;
+    -ms-flex-shrink: 1;
+    -webkit-flex-shrink: 1;
+}
+
+i-splitdiv[is="secondfixed"] >div >div[section="second"] {
+    flex-grow: 0;
+    -ms-flex-grow: 0;
+    -webkit-flex-grow: 0;
+    flex-shrink: 0;
+    -ms-flex-shrink: 0;
+    -webkit-flex-shrink: 0;
+}
+
+i-splitdiv[is="secondfixed"].itag-rendered:not(.i-resizing) >div >div[section="second"]:not(.suppress-trans) {
+    -moz-transition: width 0.5s, height 0.5s;
+    -o-transition: width 0.5s, height 0.5s;
+    -webkit-transition: width 0.5s, height 0.5s;
+    transition: width 0.5s, height 0.5s;
+}

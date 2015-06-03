@@ -12,7 +12,7 @@ itag-css {
 /* ======================================================================= */
 /* ======================================================================= */
 
-i-splitdiv[is="secondfixed"] >div >div[section="first"] {
+i-splitdiv[is="secondfixed"] >section >section[container="first"] {
     flex-grow: 1;
     -ms-flex-grow: 1;
     -webkit-flex-grow: 1;
@@ -21,7 +21,7 @@ i-splitdiv[is="secondfixed"] >div >div[section="first"] {
     -webkit-flex-shrink: 1;
 }
 
-i-splitdiv[is="secondfixed"] >div >div[section="second"] {
+i-splitdiv[is="secondfixed"] >section >section[container="second"] {
     flex-grow: 0;
     -ms-flex-grow: 0;
     -webkit-flex-grow: 0;
@@ -30,7 +30,7 @@ i-splitdiv[is="secondfixed"] >div >div[section="second"] {
     -webkit-flex-shrink: 0;
 }
 
-i-splitdiv[is="secondfixed"].itag-rendered:not(.i-resizing) >div >div[section="second"]:not(.suppress-trans) {
+i-splitdiv[is="secondfixed"].itag-rendered:not(.i-resizing) >section >section[container="second"]:not(.suppress-trans) {
     -moz-transition: width 0.5s, height 0.5s;
     -o-transition: width 0.5s, height 0.5s;
     -webkit-transition: width 0.5s, height 0.5s;
